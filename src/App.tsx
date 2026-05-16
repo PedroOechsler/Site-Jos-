@@ -308,7 +308,7 @@ export default function App() {
                 style={{ border: "3px solid #22c55e" }}
               >
                 <img
-                  src="https://pub-c0bfb119504542e0b2e6ebc8f6b3b1df.r2.dev/user-uploads/user_33Qg0jfr0eu3UGB1JTHecnUCUau/3fb379f6-6bca-44b2-b36c-ee84c5c6a5ec.png"
+                  src="https://pub-c0bfb119504542e0b2e6ebc8f6b3b1df.r2.dev/user-uploads/user_33Qg0jfr0eu3UGB1JTHecnUCUau/3952272e-e1e6-4515-ac80-ee8b4271592a.png"
                   alt="José Gonçalves"
                   className="w-full h-full object-cover object-top"
                   style={{ objectPosition: "center 10%" }}
