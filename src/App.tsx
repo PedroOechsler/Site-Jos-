@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, ShieldCheck, Clock, Lock, BookOpen, BarChart2, Target, Lightbulb, PiggyBank, TrendingUp, CheckCircle, XCircle, ChevronDown, Star } from "lucide-react";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { ArrowRight, ShieldCheck, Clock, Lock, BookOpen, BarChart2, Target, Lightbulb, PiggyBank, TrendingUp, CheckCircle, XCircle, ChevronDown, Star, LayoutGrid } from "lucide-react";
+import Produtos from "./pages/Produtos";
 
 const HOTMART_URL = "https://pay.hotmart.com/J105769400U";
 const VIDEO_URL = "https://www.youtube.com/embed/ObVhAP82txE?si=UF5rGF72FeIuPbch";
@@ -199,7 +201,33 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-export default function App() {
+function Navbar() {
+  const location = useLocation();
+  const isProdutos = location.pathname === "/produtos";
+
+  return (
+    <nav
+      className="fixed top-0 right-0 z-50 flex items-center"
+      style={{ padding: "12px 20px" }}
+    >
+      <Link
+        to={isProdutos ? "/" : "/produtos"}
+        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition-all duration-200"
+        style={{
+          backgroundColor: isProdutos ? "#22c55e" : "rgba(17,17,17,0.92)",
+          color: isProdutos ? "#ffffff" : "#22c55e",
+          border: "1px solid #22c55e",
+          backdropFilter: "blur(8px)",
+        }}
+      >
+        <LayoutGrid size={13} />
+        {isProdutos ? "Página Inicial" : "Todos os Produtos"}
+      </Link>
+    </nav>
+  );
+}
+
+function HomePage() {
   const countdown1 = useCountdown(5, 46, 45);
   const countdown2 = useCountdown(5, 46, 7);
 
@@ -580,5 +608,17 @@ export default function App() {
         </p>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/produtos" element={<Produtos />} />
+      </Routes>
+    </>
   );
 }
