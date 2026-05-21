@@ -600,6 +600,19 @@ function HomePage() {
 
       {/* FOOTER */}
       <footer style={{ backgroundColor: "#050505", borderTop: "1px solid #1f2937" }} className="py-8 px-4 text-center">
+        <div className="mb-6">
+          <a
+            href="https://api.whatsapp.com/send/?phone=5551980611212&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200"
+            style={{ backgroundColor: "#22c55e", color: "#ffffff" }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#16a34a")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#22c55e")}
+          >
+            Ficou alguma dúvida?
+          </a>
+        </div>
         <p className="text-sm mb-2" style={{ color: "#6b7280" }}>
           © 2025 José Gonçalves — Destravando suas Finanças. Todos os direitos reservados.
         </p>
