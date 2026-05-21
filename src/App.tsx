@@ -4,7 +4,7 @@ import { ArrowRight, ShieldCheck, Clock, Lock, BookOpen, BarChart2, Target, Ligh
 import Produtos from "./pages/Produtos";
 
 const HOTMART_URL = "https://pay.hotmart.com/J105769400U";
-const VIDEO_URL = "https://www.youtube.com/embed/ObVhAP82txE?si=UF5rGF72FeIuPbch";
+const VIDEO_URL = "https://www.youtube.com/embed/E-8iyfZfmNM";
 
 function useCountdown(initialHours: number, initialMinutes: number, initialSeconds: number) {
   const [time, setTime] = useState({
